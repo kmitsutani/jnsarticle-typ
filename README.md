@@ -22,17 +22,21 @@ Appendix環境と参考文献環境を作りました．
 
 参考：[typst/packages: Packages for Typst.](https://github.com/typst/packages?tab=readme-ov-file#local-packages)
 
-```
-mkdir -p {data-dir}/typst/packages/local
-cd {datadir}/typst/packages/local
-git clone git@github.com:kmitsutani/typst-jnote.git jnote
+**Windows**
+PowerShell で以下を実行してください．
+```PowerShell
+mkdir -p env:APPDATA/typst/packages/local
+cd env:APPDATA/typst/packages/local
+git clone git@github.com:kmitsutani/jnsarticle.git jnsarticle
 ```
 
-### Neovim + nvimdots
-
-- LSP: [ayamir/nvimdots](ayamir/nvimdots) を適用すると`mason.nvim` が入るのでNeovim 内で `:MasonInstall typst-lsp` とすると LSP との連携ができるようになります．
-- その他シンタックスハイライトやfiletypeの適用など: [kaarmu/typst.vim](kaarmu/typst.vim)
-- リアルタイムプレビュー: [https://github.com/chomosuke/typst-preview.nvim](chomosuke/typst-preview.nvim)
+**Mac/Linux** シェルで以下を実行してください．
+```sh
+datadir=${XDG_DATA_HOME:-$HOME/Library/Application Support}
+mkdir -p ${datadir}/typst/packages/local
+cd ${datadir}/typst/packages/local
+git clone git@github.com:kmitsutani/jnsarticle.git jnsarticle
+```
 
 ## 参考元
 
